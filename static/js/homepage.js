@@ -61,5 +61,5 @@ function startGame() {
         onSnapEnd: onSnapEnd
     };
     board = Chessboard('board1', config);
-    window.setTimeout(makeRandomMove, 500);
+    // window.setTimeout(makeRandomMove, 500);
 }
