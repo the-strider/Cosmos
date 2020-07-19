@@ -9,10 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Cosmos</title>
     <!-- Icons-->
-    <link href="{{ static_url('node_modules/coreui/dist/vendors/@coreui/icons/css/coreui-icons.min.css') }}" rel="stylesheet" />
-    <link href="{{ static_url('node_modules/coreui/dist/vendors/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet" />
-    <link href="{{ static_url('node_modules/coreui/dist/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
-    <link href="{{ static_url('node_modules/coreui/dist/vendors/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" />
+    <link href="{{ static_url('node_modules/coreui/dist/vendors/@coreui/icons/css/coreui-icons.min.css') }}"
+        rel="stylesheet" />
+    <link href="{{ static_url('node_modules/coreui/dist/vendors/flag-icon-css/css/flag-icon.min.css') }}"
+        rel="stylesheet" />
+    <link href="{{ static_url('node_modules/coreui/dist/vendors/font-awesome/css/font-awesome.min.css') }}"
+        rel="stylesheet" />
+    <link href="{{ static_url('node_modules/coreui/dist/vendors/simple-line-icons/css/simple-line-icons.css') }}"
+        rel="stylesheet" />
     <!-- Main styles for this application-->
     <link href="{{ static_url('node_modules/coreui/dist/css/style.css') }}" rel="stylesheet" />
     <link href="{{ static_url('node_modules/coreui/dist/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet" />
@@ -21,6 +25,20 @@
     <style>
         .main .container-fluid {
             padding: 0 15px;
+        }
+
+        .help-btn {
+            font-size: 1.9em;
+            color: gray;
+            cursor: pointer;
+            padding: 0.25rem 1.5rem;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+        }
+
+        .help-btn:focus {
+            outline: none;
         }
     </style>
 </head>
@@ -31,9 +49,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="/" style="padding-left:11em">
-            <img class="navbar-brand-full img-responsive" style="max-width: 17em;padding-left:33px" src="{{ static_url('images/chess1.png') }}" alt="Logo">
-            <img class="navbar-brand-minimized" src="{{ static_url('images/chess1.png') }}" width="30" height="30" alt="CoreUI Logo">
+            <img class="navbar-brand-full img-responsive" style="max-width: 17em;padding-left:33px"
+                src="{{ static_url('images/chess1.png') }}" alt="Logo">
+            <img class="navbar-brand-minimized" src="{{ static_url('images/chess1.png') }}" width="30" height="30"
+                alt="CoreUI Logo">
         </a>
+
+        <div style="padding-right: 5em;">
+            <button class="help-btn" type="button">
+                <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-primary" type="button" style="margin-top: -0.8em; font-size: 1.3em;">
+                <strong>SIGN IN</strong>
+            </button>
+        </div>
     </header>
     <div class="app-body">
         <main class="main">
@@ -51,7 +80,8 @@
     <script src="{{ static_url('node_modules/coreui/dist/vendors/popper.js/js/popper.min.js') }}"></script>
     <script src="{{ static_url('node_modules/coreui/dist/vendors/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ static_url('node_modules/coreui/dist/vendors/pace-progress/js/pace.min.js') }}"></script>
-    <script src="{{ static_url('node_modules/coreui/dist/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js') }}"></script>
+    <script
+        src="{{ static_url('node_modules/coreui/dist/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ static_url('node_modules/coreui/dist/vendors/@coreui/coreui/js/coreui.min.js') }}"></script>
     <!-- Plugins and scripts required by this view-->
     {% block resources_footer %}
