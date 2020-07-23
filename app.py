@@ -15,7 +15,7 @@ class Application(tornado.web.Application):
             (r"/", handlers.common.HomePage),
             (r"/homepage", handlers.common.HomePage),
         ]
-        super(Application, self).__init__(handlers=routes, **config)
+        super(Application, self).__init__(handlers=routes, debug = True, **config)
         # For the world to exist peacefully, this application should always listen on localhost.
         http_server = self.listen(port, address='127.0.0.1')
         # Set "xheaders" as true. Currently we are using this so that the over-write behaviour on "remote_ip" can be done

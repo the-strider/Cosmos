@@ -1,17 +1,24 @@
 {% extends base.html %}
 
 {% block resources_header %}
-<!-- <link rel="stylesheet" href="{{ static_url('js/chessboardjs-1.0.0/css/chessboard-1.0.0.css')}}"> -->
+<link rel="stylesheet" href="{{ static_url('css/homepage.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.css">
 {% end %}
 
 {% block main %}
 <div class="row justify-content-center">
-    <div class="col-md-6 col-sm-12">
-        <!-- leaderboard -->
+    <div class="col-lg-6 col-md-12">
+        
+        <div class="card">
+            <div class="card-header">
+                asdfasf
+            </div>
+            <div class="class-body">
+            </div>
+        </div>
     </div>
 
-    <div class="col-md-6 col-sm-12">
+    <div class="col-lg-6 col-md-12">
         <div class="row">
             <div class="col-md-6">
                 <div class="media">
@@ -31,11 +38,11 @@
                         <h5>Robert James Fischer</h5>
                     </div>
                 </div> 
-            </div>
-            
+            </div>    
         </div>
+
         <!-- chess board -->
-        <div id="board1" style="width: 600px"></div>
+        <div id="board1" style="width: 100%"></div>
     </div>
 </div>
 {% end %}
