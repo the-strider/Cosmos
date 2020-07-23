@@ -3,11 +3,12 @@
 window.onload = init();
 
 function init() {
-    startGame();
+    startGame('board1');
+    startGame('board2');
 }
 
 
-function startGame() {
+function startGame(chess_board_id) {
     var board = null;
     var game = new Chess();
 
@@ -60,6 +61,7 @@ function startGame() {
         onDrop: onDrop,
         onSnapEnd: onSnapEnd
     };
-    board = Chessboard('board1', config);
+    board = Chessboard(chess_board_id, config);
+    
     // window.setTimeout(makeRandomMove, 500);
 }

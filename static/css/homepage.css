@@ -1,13 +1,39 @@
+.user-name-span {
+    vertical-align: middle;
+    font-size: 1.35em;
+    font-weight: bolder;
+    color: #5D6D7E
+}
+
 .content-container {
     display: grid;
-    grid-template-rows: 100vh;
-    grid-template-columns: 50%, 50%;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5em;
 }
 
 .content-item-1 {
-    grid-column: 1 / 2;
+    grid-column: 1 / span 2;
+    text-align: center;
 }
 
+
 .content-item-2 {
-    grid-column: 2 / 2;
+    grid-column: 3 / -1;
+    text-align: center;
+}
+
+.content-item-5 {
+    grid-column: 1 / span 2;
+    /* padding-right: 1em; */
+}
+
+.content-item-6 {
+    grid-column: 3 / span 4;
+    padding-right: 1em;
+    /* padding-left: 1em; */
+}
+
+.content-item-7 {
+    grid-column: 1 / -1;
 }

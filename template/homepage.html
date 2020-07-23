@@ -8,7 +8,6 @@
 {% block main %}
 <div class="row justify-content-center">
     <div class="col-lg-6 col-md-12">
-        
         <div class="card">
             <div class="card-header">
                 asdfasf
@@ -19,30 +18,24 @@
     </div>
 
     <div class="col-lg-6 col-md-12">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="media">
-                    <img src="{{ static_url('images/chesspieces/wikipedia/wP.png') }}" style="margin-left:-16px">
-                    <div class="media-body mt-2">
-                        <h3 >Gary</h3>
-                        <h5>Gary Kasparov</h5>
-                    </div>
-                </div> 
+        <div class="content-container">
+            <div class="content-item-1">
+                <span class="user-name-span white">Gary Kasparov <small style="padding: 0.5em">vs</small> Robert James</span>
             </div>
-
-            <div class="col-md-6">
-                <div class="media">
-                    <img src="{{ static_url('images/chesspieces/wikipedia/bP.png') }}" >
-                    <div class="media-body mt-2">
-                        <h3 >Robert</h3>
-                        <h5>Robert James Fischer</h5>
-                    </div>
-                </div> 
-            </div>    
+            <div class="content-item-2">
+                <span class="user-name-span white">fastboot <small style="padding: 0.5em">vs</small> lowjack</span>
+            </div>
+            <!-- chessboard 1 -->
+            <div class="content-item-5" id="board1"></div>
+            <!-- chessboard 2 -->
+            <div class="content-item-6" id="board2"></div>
+            <!-- Start New Game option (Play anonymously if not sign in) -->
+            <div class="content-item-7">
+                <div style="width: 100%; background-color: teal;">
+                afdsf    
+                </div>
+            </div>
         </div>
-
-        <!-- chess board -->
-        <div id="board1" style="width: 100%"></div>
     </div>
 </div>
 {% end %}
