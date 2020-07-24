@@ -5,6 +5,7 @@ window.onload = init();
 function init() {
     startGame('board1');
     startGame('board2');
+    updateLeaderBoardTable();
 }
 
 
@@ -64,4 +65,69 @@ function startGame(chess_board_id) {
     board = Chessboard(chess_board_id, config);
     
     // window.setTimeout(makeRandomMove, 500);
+}
+
+
+// ########################################################################################
+
+
+function updateLeaderBoardTable() {
+    let table_data = [
+        {
+            name: 'lowjack',
+            total_games: 10,
+            game_won: 10
+        },
+        {
+            name: 'fastboot',
+            total_games: 10,
+            game_won: 9
+        },
+        {
+            name: 'starboy_jb',
+            total_games: 10,
+            game_won: 8
+        },
+        {
+            name: 'masterbios',
+            total_games: 10,
+            game_won: 7
+        },
+        {
+            name: 'ikusab',
+            total_games: 10,
+            game_won: 6
+        },
+        {
+            name: 'unam',
+            total_games: 10,
+            game_won: 5
+        },
+    ];
+
+    let html = "";
+    $.each(table_data, function(idx, data) {
+        html += `
+            <tr>
+                <td>${idx + 1}</td>
+                <td>${data['name']}</td>
+                <td>${data['game_won']} / ${data['total_games']}</td>
+            </tr>`;
+    });
+
+    html = `
+        <table class="table table-borderless">
+            <thead class="thead-light">
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Games</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${html}
+            </tbody>
+        </table>`;
+
+    $('#leaderboard_card .leaderboard_table').html(html);
 }
