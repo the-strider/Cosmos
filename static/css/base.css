@@ -5,40 +5,6 @@
 .app-body {
     margin-top: 0!important;
 }
-/* 
-.help-btn {
-    font-size: 1.9em;
-    color: gray;
-    cursor: pointer;
-    padding: 0.25rem 1.5rem;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-}
-
-.help-btn:focus {
-    outline: none;
-}
-
-
-.form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
-}
-@media screen and (max-width: 992px) {
-    .nav-item {
-        font-size: 1.3em
-    }
-}
-
-*/
 
 /* navigation bar */
 .navbar-font-md

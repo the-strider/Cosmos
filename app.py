@@ -14,6 +14,7 @@ class Application(tornado.web.Application):
         routes = [
             (r"/", handlers.common.HomePage),
             (r"/homepage", handlers.common.HomePage),
+            (r"/signup", handlers.common.Signup),
         ]
         super(Application, self).__init__(handlers=routes, debug = True, **config)
         # For the world to exist peacefully, this application should always listen on localhost.

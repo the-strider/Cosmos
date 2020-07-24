@@ -9,6 +9,11 @@ from tornado.ioloop import IOLoop
 from .base import BaseHandler
 
 
+class Signup(BaseHandler):
+    async def get(self):
+        return self.render("signup.html")
+
+
 class HomePage(BaseHandler):
     async def get(self):
         return self.render("homepage.html")
