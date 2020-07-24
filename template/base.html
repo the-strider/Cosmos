@@ -33,17 +33,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul id="link" class="nav navbar-nav ml-auto">
-                    <li class="dropdown" id="first-link">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Page 1-1</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
-                        </ul>
+                <ul class="link nav navbar-nav ml-auto">
+                    <li class="about-link">
+                        <a href='#'>About</a>
                     </li>
-                    <li><a href='/login'>Sign In</a></li>
-                    <li id="button-link"><a href="/signup">Sign Up</a></li>
+                    <li><a href='/signup'>Sign In</a></li>
+                    <li class="signup-link"><a href="/signup">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -59,6 +54,7 @@
             </div>
         </main>
     </div>
+
     <!-- CoreUI and necessary plugins-->
     <script src="{{ static_url('node_modules/coreui/dist/vendors/jquery/js/jquery.min.js') }}"></script>
     <script src="{{ static_url('node_modules/coreui/dist/vendors/popper.js/js/popper.min.js') }}"></script>
