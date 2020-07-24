@@ -1,0 +1,89 @@
+.main .container-fluid {
+    padding: 0 15px;
+}
+
+.app-body {
+    margin-top: 0!important;
+}
+/* 
+.help-btn {
+    font-size: 1.9em;
+    color: gray;
+    cursor: pointer;
+    padding: 0.25rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.help-btn:focus {
+    outline: none;
+}
+
+
+.form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+@media screen and (max-width: 992px) {
+    .nav-item {
+        font-size: 1.3em
+    }
+}
+
+*/
+
+/* navigation bar */
+.navbar-font-md
+{
+  border-radius: 0px;
+  font-size: 1.2em;
+}
+
+/* logo or main heading */
+#logo
+{
+  font-size:1.4em;
+  font-weight:bolder;
+  color:#00004d;
+  letter-spacing:2px;
+}
+/* navigation links*/
+#link a
+{
+  color:#01325d;
+  margin:0 15px 0 15px;
+  letter-spacing:1.5px;
+}
+/* navigation link with right border */
+#first-link
+{
+  padding-right:6px;
+  border-right:solid 1px #ccc;
+}
+/* sign up link button and toggle button */
+#button-link
+{
+  color:#f2f2f2;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.2);
+  border-radius: 2px;
+  background-color: #fa6a48;
+}
+
+#button-link a
+{
+  color:#f2f2f2;
+}
+
+.nav > li {
+    padding: 0.5em 0em;
+}
