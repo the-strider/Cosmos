@@ -103,27 +103,62 @@ function updateLeaderBoardTable() {
             total_games: 10,
             game_won: 5
         },
+        {
+            name: 'masterbios',
+            total_games: 10,
+            game_won: 7
+        },
+        {
+            name: 'ikusab',
+            total_games: 10,
+            game_won: 6
+        },
+        {
+            name: 'unam',
+            total_games: 10,
+            game_won: 5
+        },
+        {
+            name: 'ikusab',
+            total_games: 10,
+            game_won: 6
+        }
     ];
 
     let html = "";
     $.each(table_data, function(idx, data) {
+        let rank_html = idx + 1;
+        if(idx == 0) {
+            rank_html = `<i class="fa fa-trophy fa-lg" style="color:#FFDF00">`;
+        } else if(idx == 1) {
+            rank_html = `<i class="fa fa-trophy fa-lg" style="color:#C0C0C0">`;
+        } else if(idx == 2) {
+            rank_html = `<i class="fa fa-trophy fa-lg" style="color:#cd7f32">`;
+        } else {
+            rank_html = `<span style="color: #4D5656"><strong>${idx+1}</strong></span>`
+        }
+
         html += `
             <tr>
-                <td>${idx + 1}</td>
-                <td>${data['name']}</td>
-                <td>${data['game_won']} / ${data['total_games']}</td>
+                <td class="text-center">${rank_html}</td>
+                <td>
+                    <div class="media">
+                        <img class="mr-3" src="/static/images/sonic.jpg" style="width: 3.1em"/>
+                        <div class="media-body">
+                            <h5 class="leaderboard-username">${data['name']}</h5>
+                            <span class="small text-muted"><i class="flag-icon flag-icon-in mr-2"></i>International master</span>
+                    </div>
+                </div>
+                </td>
+                <td>
+                    <span class="pr-2" style="color: green"><i class="fa fa-play win-icon"></i> ${data['game_won']}</span> 
+                    <span>-</span>
+                    <span class="pl-2" style="color:red"><i class="fa fa-play lose-icon"></i> ${data['total_games']}</span></td>
             </tr>`;
     });
 
     html = `
         <table class="table table-borderless">
-            <thead class="thead-light">
-                <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Games</th>
-                </tr>
-            </thead>
             <tbody>
                 ${html}
             </tbody>
